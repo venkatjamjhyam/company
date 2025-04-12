@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar & Weekly Schedule</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="/contentmanager.html"></a>
+    <div class="box">
+        <div class="main-container">
+            <div class="top-bar">
+                <div class="top-bar-left">
+                    <button id="toggle-menu-btn">Hide Menu</button>
+                    <h2 id="booking-calendar-title">Booking Calendar <span id="calendar-month-year-title"></span></h2>
+                </div>
+                <div class="top-bar-right">
+                    <button class="action-btn" id="more-actions-btn">More Actions</button>
+                    <button class="action-btn primary" id="add-sessions-btn">Add Sessions</button>
+                </div>
+            </div>
+
+            <hr class="separator">
+
+            <div class="main-content">
+                <div class="calendar-container" id="calendar-section">
+                    <div class="calendar-header">
+                        <button id="prev-month">&lt;</button>
+                        <div id="month-year">Month Year</div> 
+                        <button id="next-month">&gt;</button>
+                        
+                    </div>
+                    <div class="calendar-weekdays">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div class="calendar-dates" id="calendar-dates">
+                        </div>
+                </div>
+
+                <div class="weekly-schedule-container" id="weekly-schedule-section">
+                     <div class="week-view-header">
+                        <button id="today-btn">Today</button>
+                        <p><small>No Sessions Scheduled this week</p></small>
+                        <div class="week-navigation">
+                            <button id="prev-week">&lt;</button>
+                            <span id="week-range">Week Range</span>
+                            <button id="next-week">&gt;</button>
+                        </div>
+                     </div>
+
+                     <div class="schedule-grid">
+                        <div class="time-column" id="time-column">
+                            </div>
+                        <div class="days-columns" id="days-columns">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
