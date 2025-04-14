@@ -10,69 +10,111 @@
     <a href="/index.html"></a>
     <div class="box">
         <div class="container">
-    <section class="dashboard">
-        <div class="header">
-          <h2>My Screens</h2>
-          <p>Select a screen to edit, view and open its dashboard.</p>
-          <div class="actions">
-            <button class="btn">Create New Folder +</button>
-              <button class="btn">Create New Screen +</button>
-          </div>
-          <div class="box-container">
-            <div class="search-box-container">
-              <p><b>All Screens</b></p>
-              <button class="btn danger">
-                  <span class="icon">🗑</span>Trash</button>
-              <input type="text" placeholder="Search By City / Locality / Screen Name / ID" class="search-bar"/>
+          <section class="dashboard">
+            <div class="header">
+              <h2>My Screens</h2>
+              <p>Select a screen to edit, view and open its dashboard.</p>
+              <div class="actions">
+                <button class="btn1">+ Create New Folder </button>
+                <button class="btn2">+ Create New Screen </button>
+              </div>
+              <div class="box-container">
+                <div class="search-box-container">
+                  <p><b>All Screens</b></p>
+                  <button class="btn danger">
+                    <span class="icon"><a href="Trashbox/trash.html">🗑</a></span><left>Trash</left>
+                  </button>
+                  <input type="text" placeholder="Search By City / Locality / Screen Name / ID" class="search-bar" id="searchBar"/>
+                </div>
+                <div class="line-above"></div>
+                
+                <div class="grid" id="screenGrid">
+                  <!-- Dynamically added cards -->
+                  <div class="card" data-id="1">
+                    <div class="card-header">
+                      <span>Actions ▼</span>
+                      <div class="dropdown">
+                        <button class="delete-btn" onclick="moveToTrash(1)">Delete</button>
+                      </div>
+                    </div>
+                    <a href="screentitle/screentitle.html">Screen Title</a>
+                    <a href="screentitle/screentitle.html">Screen ID</a>
+                  </div>
+                  <div class="card" data-id="2">
+                    <div class="card-header">
+                      <span>Actions ▼</span>
+                      <div class="dropdown">
+                        <button class="delete-btn" onclick="moveToTrash(2)">Delete</button>
+                      </div>
+                    </div>
+                    <a href="screentitle/screentitle.html">Screen Title</a>
+                    <a href="screentitle/screentitle.html">Screen ID</a>
+                  </div>
+                  <div class="card" data-id="3">
+                    <div class="card-header">
+                      <span>Actions ▼</span>
+                      <div class="dropdown">
+                        <button class="delete-btn" onclick="moveToTrash(3)">Delete</button>
+                      </div>
+                    </div>
+                    <a href="screentitle/screentitle.html">Screen Title</a>
+                    <a href="screentitle/screentitle.html">Screen ID</a>
+                  </div>
+                  <div class="card" data-id="4">
+                    <div class="card-header">
+                      <span>Actions ▼</span>
+                      <div class="dropdown">
+                        <button class="delete-btn" onclick="moveToTrash(4)">Delete</button>
+                      </div>
+                    </div>
+                    <a href="screentitle/screentitle.html">Screen Title</a>
+                    <a href="screentitle/screentitle.html">Screen ID</a>
+                  </div>
+                  <div class="card" data-id="5">
+                    <div class="card-header">
+                      <span>Actions ▼</span>
+                      <div class="dropdown">
+                        <button class="delete-btn" onclick="moveToTrash(5)">Delete</button>
+                      </div>
+                    </div>
+                    <a href="screentitle/screentitle.html">Screen Title</a>
+                    <a href="screentitle/screentitle.html">Screen ID</a>
+                  </div>
+                  <div class="card" data-id="6">
+                    <div class="card-header">
+                      <span>Actions ▼</span>
+                      <div class="dropdown">
+                        <button class="delete-btn" onclick="moveToTrash(6)">Delete</button>
+                      </div>
+                    </div>
+                    <a href="screentitle/screentitle.html">Screen Title</a>
+                    <a href="screentitle/screentitle.html">Screen ID</a>
+                  </div>
+                  <div class="card" data-id="7">
+                    <div class="card-header">
+                      <span>Actions ▼</span>
+                      <div class="dropdown">
+                        <button class="delete-btn" onclick="moveToTrash(7)">Delete</button>
+                      </div>
+                    </div>
+                    <a href="screentitle/screentitle.html">Screen Title</a>
+                    <a href="screentitle/screentitle.html">Screen ID</a>
+                  </div>
+                  <div class="card" data-id="8">
+                    <div class="card-header">
+                      <span>Actions ▼</span>
+                      <div class="dropdown">
+                        <button class="delete-btn" onclick="moveToTrash(8)">Delete</button>
+                      </div>
+                    </div>
+                    <a href="screentitle/screentitle.html">Screen Title</a>
+                    <a href="screentitle/screentitle.html">Screen ID</a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="line-above"></div>
-            <div class="grid" id="screenGrid">
-              <!-- Dynamically added cards -->
-              <div class="card">
-                  <div class="screen-title">Screen Title</div>
-                  <div class="screen-id">Screen ID</div>
-                
-              </div>
-              <div class="card">
-                  <div class="screen-title">Screen Title</div>
-                  <div class="screen-id">Screen ID</div>
-                
-              </div>
-              <div class="card">
-                
-                  <div class="screen-title">Screen Title</div>
-                  <div class="screen-id">Screen ID</div>
-                
-              </div>
-              <div class="card">
-                  <div class="screen-title">Screen Title</div>
-                  <div class="screen-id">Screen ID</div>
-                
-              </div>
-              <div class="card">
-                  <div class="screen-title">Screen Title</div>
-                  <div class="screen-id">Screen ID</div>
-                
-              </div>
-              <div class="card">
-                  <div class="screen-title">Screen Title</div>
-                  <div class="screen-id">Screen ID</div>
-                
-              </div>
-              <div class="card">
-                  <div class="screen-title">Screen Title</div>
-                  <div class="screen-id">Screen ID</div>
-                
-              </div>
-              <div class="card">
-                  <div class="screen-title">Screen Title</div>
-                  <div class="screen-id">Screen ID</div>
-              </div>
-            </div>
-          </div>
+          </section>
         </div>
-      </section>
-      </div>
     </div>
       <script src="script.js"></script>
 </body>

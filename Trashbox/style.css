@@ -1,0 +1,121 @@
+/* General styles for the trash box */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.box {
+  border: 2px solid #ccc;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.dashboard {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  position: relative; /* Ensure positioning for child elements */
+}
+
+.actions {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.header p {
+  margin: 5px 0 20px;
+  color: #666;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn2 {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: right;
+}
+
+
+.btn2 {
+  background-color: blue;
+  color: white;
+}
+
+.box-container {
+  background-color: #d9e3f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-box-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.search-box-container p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.search-bar {
+  flex-grow: 1;
+  max-width: 300px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn.danger {
+  background-color: rgb(255, 255, 255);
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn.danger:hover {
+  background-color: #f8d7da;
+}
+
+.icon {
+  font-size: 16px;
+  color: #e74c3c;
+}

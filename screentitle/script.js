@@ -204,22 +204,6 @@ document.addEventListener('DOMContentLoaded', () => {
         alert("Add Sessions clicked (placeholder)");
     });
 
-    // Custom context menu logic
-    const slide = document.getElementById('slide');
-    const contextMenu = document.getElementById('custom-context-menu');
-
-    // Show the custom context menu on right-click
-    slide.addEventListener('contextmenu', (event) => {
-        event.preventDefault(); // Prevent the default context menu
-        contextMenu.style.display = 'block';
-        contextMenu.style.left = `${event.pageX}px`;
-        contextMenu.style.top = `${event.pageY}px`;
-    });
-
-    // Hide the context menu when clicking elsewhere
-    document.addEventListener('click', () => {
-        contextMenu.style.display = 'none';
-    });
 
     // --- Initial Render ---
     renderCalendar();

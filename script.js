@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="id">${screen.id}</div>
       <div class="card-actions">
         <button class="btn small">Edit</button>
-        <button class="btn small">Delete</button>
       </div>
     `;
 
@@ -233,6 +232,78 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log("Add Sessions clicked");
     alert("Add Sessions clicked (placeholder)");
   });
+
+  // Dropdown menu toggle logic
+  const actionSpans = document.querySelectorAll('.card-header span');
+
+  actionSpans.forEach((span) => {
+    span.addEventListener('click', (event) => {
+      const dropdown = span.nextElementSibling;
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+      event.stopPropagation();
+    });
+  });
+
+  document.addEventListener('click', () => {
+    const dropdowns = document.querySelectorAll('.card-header .dropdown');
+    dropdowns.forEach((dropdown) => {
+      dropdown.style.display = 'none';
+    });
+  });
+
+  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+  dropdownToggles.forEach((toggle) => {
+    toggle.addEventListener('click', (event) => {
+      const dropdownMenu = toggle.nextElementSibling;
+      const isVisible = dropdownMenu.style.display === 'block';
+      
+      // Hide all dropdown menus
+      document.querySelectorAll('.dropdown-menu').forEach((menu) => {
+        menu.style.display = 'none';
+      });
+
+      // Toggle the clicked dropdown menu
+      dropdownMenu.style.display = isVisible ? 'none' : 'block';
+      event.stopPropagation();
+    });
+  });
+
+  // Hide dropdown menus when clicking outside
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.dropdown-menu').forEach((menu) => {
+      menu.style.display = 'none';
+    });
+  });
+
+  // --- Trash Box Logic ---
+  function moveToTrash(cardId) {
+    const card = document.querySelector(`.card[data-id="${cardId}"]`);
+    if (card) {
+      // Remove the card from the current grid
+      card.remove();
+
+      // Save the card to localStorage for persistence
+      const trash = JSON.parse(localStorage.getItem('trash')) || [];
+      trash.push(card.outerHTML);
+      localStorage.setItem('trash', JSON.stringify(trash));
+
+      alert('Card moved to Trash!');
+    }
+  }
+
+  function loadTrash() {
+    const trashGrid = document.getElementById('trashGrid');
+    if (trashGrid) {
+      const trash = JSON.parse(localStorage.getItem('trash')) || [];
+      trashGrid.innerHTML = trash.join('');
+    }
+  }
+
+  // Load trash cards when the trash.html file is opened
+  if (window.location.pathname.includes('Trashbox/trash.html')) {
+    loadTrash();
+  }
 
   // --- Initial Render ---
   renderCalendar();
