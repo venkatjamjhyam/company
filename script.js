@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const grid = document.getElementById('screenGrid');
   const searchBar = document.getElementById('searchBar');
-  const birthdayContainer = document.getElementById('birthdayContainer');
+  
 
   // Search bar event listener
   searchBar.addEventListener('input', function (event) {
